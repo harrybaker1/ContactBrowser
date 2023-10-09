@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ContactListFragment"
+    android:background="@color/primary_blue">
+    <LinearLayout
+        android:id="@+id/headerLinearLayout"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/contactListRecycler"
+        android:background="@color/secondary_blue"
+        android:layoutDirection="rtl"
+        android:gravity="center_vertical">
+        <ImageButton
+            android:id="@+id/newContactButton"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:background="@drawable/plus"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="10dp"></ImageButton>
+        <ImageButton
+            android:id="@+id/importButton"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:background="@drawable/importicon"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="10dp"></ImageButton>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/contactListRecycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLinearLayout"></androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

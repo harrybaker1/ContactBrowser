@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/primary_blue">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        app:cardCornerRadius="100dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="12dp"
+        android:layout_centerVertical="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:cardCornerRadius="250dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/profilePicture"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/default_profile"
+                android:scaleType="centerCrop"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:layout_toEndOf="@+id/cardView"
+        android:textSize="26dp"
+        android:text="Name"
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@+id/cardView"
+        android:layout_marginTop="14dp"
+        android:background="@color/white"
+        />
+</RelativeLayout>
